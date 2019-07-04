@@ -17,7 +17,7 @@ int main(void)
 	int T;	cin >> T;
 	for (int test_case = 1; test_case <= T; test_case++)
 	{
-		// Init, Input Data
+		/* Init, Input Data */
 		cin >> N >> M;
 		tree = new int[N];
 		for (int i = 0; i < N; i++)
@@ -26,7 +26,7 @@ int main(void)
 			tree_height_sum += tree[i];
 		}
 
-		// Make Answer
+		/* Make Answer */
 		// Sort Variation 'tree'	// if QuickSort O(nlogn)
 		sort(tree, tree + N);
 
@@ -49,10 +49,10 @@ int main(void)
 			if (sum >= M)	break;
 		}
 
-		// Print Answer
+		/* Print Answer */
 		cout << "#" << test_case << " " << cut_height << endl;
 
-		// Delete Memory
+		/* Delete Memory */
 		delete[]tree;
 	}
 
